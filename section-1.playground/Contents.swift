@@ -63,6 +63,10 @@ let diceRoll = (randomNumber % 6 ) + 1
 
 
 // Challenge 9
-//let a: Double
-//let b: Double
-//let c: Double
+let a: Double = 1
+let b: Double = 2
+let c: Double = 3
+
+let root1: Double = (-b + ((b * b) - (4 * a * c)).squareRoot()) / (2 * a)
+let root2: Double = (-b - ((b * b) - (4 * a * c)).squareRoot()) / (2 * a)
+
