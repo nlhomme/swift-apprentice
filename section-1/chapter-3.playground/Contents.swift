@@ -110,6 +110,7 @@ while true {
         break
     }
 }
+print(triangularNumber)
 
 // Challenge 7: Fibonacci
 
