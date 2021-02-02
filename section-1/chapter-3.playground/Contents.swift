@@ -95,8 +95,17 @@ if nextPosition == 3 {
 // More at https://github.com/sleeve/rw-swift-apprentice-5/blob/cc997b720caf8d32d9952624c2c402e9a43f7dc7/chapter3.playground/Contents.swift#L257
 
 // Challenge 5: Next power of two
-let number1 = Int.random(in: 1...50)
-let next1 = number1 * number1
+// Challenge 5: Next power of two
+let number5 = Int.random(in: 1...1_000_000)
+var counter5 = 0
+var nextPowerOfTwo = 1
+
+while nextPowerOfTwo < number5 {
+    nextPowerOfTwo *= 2
+    counter5 += 1
+}
+print("\(nextPowerOfTwo) is the next power of two after \(number5)")
+print("\(nextPowerOfTwo) is 2 times \(counter)")
 
 // Challenge 6: Triangular number
 let number2 = Int.random(in: 1...50)
