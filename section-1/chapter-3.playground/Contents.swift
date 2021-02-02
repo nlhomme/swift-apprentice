@@ -122,9 +122,10 @@ while true {
 print(triangularNumber)
 
 // Challenge 7: Fibonacci
-
-
 // Challenge 8: Make a loop
-
-
 // Challenge 9: Dice roll table
+/*
+Know I know why sleeve didn't finished the challenges: the difficulty is ridiculously hard when you're a beginner :(
+If you're reading this, chek out the solution:
+ https://github.com/raywenderlich/sa-materials/blob/editions/5.0/03-basic-control-flow/projects/challenge/03-basic-control-flow-challenges.playground/Contents.swift
+*/
