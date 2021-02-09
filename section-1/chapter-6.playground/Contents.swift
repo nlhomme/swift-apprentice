@@ -11,3 +11,20 @@ let parsedInt = Int("10")
 
 // 3
 let parsedInt3 = Int("cat") // equals nil
+
+
+// Unwrapping optionnals: mini-exercises
+// 1
+if let myFavoriteSong = myFavoriteSong {
+    print(myFavoriteSong)
+} else {
+    print("No favorite song")
+}
+
+// 2
+myFavoriteSong = nil
+if let myFavoriteSong = myFavoriteSong {
+    print(myFavoriteSong)
+} else {
+    print("No favorite song")
+}
