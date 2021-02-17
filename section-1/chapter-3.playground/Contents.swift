@@ -95,7 +95,6 @@ if nextPosition == 3 {
 // More at https://github.com/sleeve/rw-swift-apprentice-5/blob/cc997b720caf8d32d9952624c2c402e9a43f7dc7/chapter3.playground/Contents.swift#L257
 
 // Challenge 5: Next power of two
-// Challenge 5: Next power of two
 let number5 = Int.random(in: 1...1_000_000)
 var counter5 = 0
 var nextPowerOfTwo = 1
