@@ -30,3 +30,34 @@ func playerLocation (for player: [String:String]) {
 }
 playerLocation(for: bobData)
 
+
+// Challenges
+// Challenge 1: Which is valid
+var array1 = [Int]() // Is valid after chek, but that syntax isn't written in the chapter...
+let array2 = [] // Not valid: type must be precised
+let array3: [String] = [] // Is valid
+
+let array4 = [1, 2, 3]
+print(array4[0]) // Valid
+print(array4[5]) // Not valid: index out of range
+array4[1...2] // Valid
+array4[0] = 4 // Not valid: array4 is a constant
+array4.append(4) // Not valid: array4 is a constant
+
+var array5 = [1, 2, 3]
+array5[0] = array5[1]  // Valid
+array5[0...1] = [4, 5] // Valid
+array5[0] = "Six" // Not valid: type must be Int
+array5 += 6  // Not valid: correct statement would be 'array5 += [6]'
+for item in array5 { print(item) } // Valid
+
+// Challenge 2: Remove the first number
+func removingOnce(_ item: Int, from array: [Int]) -> [Int] {
+    // array is constant, so you have to work with a copy
+    var newArray = array
+        // Properties available when typing <array>.<autocompletion>
+    if let index = newArray.firstIndex(of: item) {
+            newArray.remove(at: index)
+    }
+    return newArray
+}
