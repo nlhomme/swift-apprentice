@@ -59,3 +59,111 @@ func removingOnce(_ item: Int, from array: [Int]) -> [Int] {
     return newArray
     
 }
+
+// Challenge 3: Remove the numbers
+func removing(_ item: Int, from array: [Int]) -> [Int]{
+    var newArray: [Int] = []
+    for value in array {
+        if value != item {
+            newArray.append(value)
+        }
+    }
+    return newArray
+}
+
+// Challenge 4: Reverse an array
+// Here is my answer:
+/*
+ func reversed(_ array: [Int]) -> [Int] {
+     var newArray: [Int] = []
+     for index in array {
+         var reversedIndex = array.count - index
+         newArray.append(array[reversedIndex])
+     }
+     return newArray
+ }
+*/
+// For reasons I don't know, it works only if array contains numbers following each others
+
+// Here is the official answer from the Ray Wenderlich team:
+func reversed(_ array: [Int]) -> [Int] {
+  var newArray: [Int] = []
+  for item in array {
+    newArray.insert(item, at: 0)
+  }
+  return newArray
+}
+// Starting the scond iteration, values are inserted at index 0 in newArray, so the the existing values are moved to the next index, and so on...
+// Source:
+// https://github.com/raywenderlich/sa-materials/blob/daf048726b6ff2223a509282985adbe08133acfb/07-arrays-dictionaries-sets/projects/challenge/arrays-dictionaries-sets-challenges.playground/Contents.swift#L101
+
+// Challenge 5: Return the middle
+func middle(_ array: [Int]) -> Int? {
+    if array.isEmpty {
+        return nil
+    } else {
+        return array[(array.count / 2) - 1]
+    }
+}
+// The official answer is false because for an array with 4 element, it return the value of index 3 instead of the value of index 2
+// officiel answer:
+// https://github.com/raywenderlich/sa-materials/blob/daf048726b6ff2223a509282985adbe08133acfb/07-arrays-dictionaries-sets/projects/challenge/arrays-dictionaries-sets-challenges.playground/Contents.swift#L119
+
+// Challenge 6: Find the minimum and maximum:
+func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
+    if numbers.isEmpty {
+        return nil
+    }
+    
+    var minimum = 10000
+    var maximum = -10000
+    for value in numbers {
+        if value < minimum {
+            minimum = value
+        } else {
+            maximum = value
+        }
+    }
+    return (minimum, maximum)
+}
+
+// Challenge 7: Which is valid?
+/*
+ let dict1: [Int, Int] = [:] // not valid, the correct statement for that is the third one
+ let dict2 = [:] // not valid, type cannot be infered
+ let dict3: [Int: Int] = [:] // valid
+*/
+
+let dict4 = ["One": 1, "Two": 2, "Three": 3]
+/*
+ dict4[1] // not valid, you work on dictionaries using keys, not values
+ dict4["One"] // valid
+ dict4["Zero"] = 0 // NOT valid: the dictionary is a constant
+ dict4[0] = "Zero" // you call a dictionary with keys, not values + the dictionary is a constant
+*/
+
+
+/*
+ dict5["NY"] // valid. The statement is technically correct, you can put it on a print() for example
+ dict5["WA"] = "Washington" // valid
+ dict5["CA"] = nil // valid
+*/
+
+// Challenge 8: Long names
+func longNames (_ dictionary: [String:String]) {
+    // for (code, name) in dictionary {
+    for (_, name) in dictionary {
+        if name.count > 8 {
+            print(name)
+        }
+    }
+}
+
+// Challenge 9: Merge dictionaries
+    func merging(_ dict1: [String: String], with dict2: [String: String]) -> [String: String] {
+        var newDictionary = dict1
+        for (key2, value2) in dict2 {
+            newDictionary[key2] = value2
+        }
+        return newDictionary
+    }
