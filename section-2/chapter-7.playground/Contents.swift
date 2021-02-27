@@ -53,11 +53,9 @@ for item in array5 { print(item) } // Valid
 
 // Challenge 2: Remove the first number
 func removingOnce(_ item: Int, from array: [Int]) -> [Int] {
-    // array is constant, so you have to work with a copy
     var newArray = array
-        // Properties available when typing <array>.<autocompletion>
-    if let index = newArray.firstIndex(of: item) {
-            newArray.remove(at: index)
-    }
+    guard let indexToRemove = newArray.firstIndex(of: item) else { return newArray }
+    newArray.remove(at: indexToRemove)
     return newArray
+    
 }
