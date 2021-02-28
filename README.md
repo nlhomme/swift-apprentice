@@ -12,3 +12,4 @@ My progress with the book [Swift Apprentice](https://www.raywenderlich.com/books
 - Browse sections and chapters folders
 - Open only "Content.swift" files to consult my answers to mini-exercises and challenges
 
+If you lokking for official answers to the mini-exercies and challenges, they are available at [raywenderlich/sa-materials](https://github.com/raywenderlich/sa-materials/pulls)
