@@ -167,3 +167,38 @@ func longNames (_ dictionary: [String:String]) {
         }
         return newDictionary
     }
+
+// Challenge 10: Count the characters
+func occurrencesOfCharacters(in text: String) -> [Character: Int] {
+    var occurences: [Character:Int] = [:]
+    for letter in text {
+        // Decapsulate occurences[letter] to occurence
+        // Then if occurence is not nil it means that the letter is already counted in the dictionary
+        if let occurence = occurences[letter] {
+            // So we incremement the occurence counter
+            occurences[letter] = occurence + 1
+        // Else, it means that it's the first time we count the letter
+        } else {
+            occurences[letter] = 1
+        }
+    }
+    return occurences
+}
+
+// Challenge 11: Uniques values
+func isInvertible(_ dictionary: [String: Int]) -> Bool {
+    var set: Set<Int> = []
+    for (_, value) in dictionary {
+        if set.contains(value){
+            return false
+        } else {
+            set.insert(value)
+        }
+    }
+    return true
+}
+
+// Challenge 12: Removing keys and setting values to nil
+var nameTitleLookup: [String: String?] = ["Mary": "Engineer", "Patrick": "Intern", "Ray": "Hacker"]
+nameTitleLookup.updateValue(nil, forKey: "Patrick")
+nameTitleLookup["Ray"] = nil
