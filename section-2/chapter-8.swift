@@ -27,3 +27,17 @@ let adultsOnlyNames = namesAndAges.filter {$0.value >= 18}.map {
     $0.key
 }
 //print(adultsOnlyNames)
+
+
+// Challenges
+// Challenge 1: Repeating yourself
+func repeatTask(times: Int, task: () -> Void) {
+    for i in 0...times {
+        task()
+        }
+    }
+
+repeatTask(times: 10) {
+    print("Swift apprentice is a great book!")
+}
+
